@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="index.css" rel="stylesheet">
+
+</head>
+<style>
+
+</style>
+
+<body style="background-color: aquamarine;">
+
+  <div class="div container">
+    <h1 class="text-center my-2">Resume Generator</h1>
+    <p class="text-center">By Code with kunal</p>
+
+    <div class="row">
+
+      <div class="div col-md-6">
+        <!--first colo-->
+        <h3>Personal information</h3>
+        <div class="form-group">
+          <label for="namefeild">Your Name</label>
+          <input placeholder="enter here" type="text" id="namefeild" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="namefeild">Your Gmail</label>
+          <input placeholder="enter here" type="text" id="mailfeild" class="form-control">
+        </div>
+
+        <div class="form-group mt-2">
+          <label for="phonefeild">Your Contact</label>
+          <input placeholder="enter here" type="text" id="phonefeild" class="form-control">
+        </div>
+
+        <div class="form-group mt-2">
+          <label for="addfeild">Your Address</label>
+          <textarea class="form-control" placeholder="Enter Here" id="addressfeild" rows="2">
+
+        </textarea>
+        </div>
+        <p class="text-secondary mt-3"> IMportant Links</p>
+
+
+        
+        <div class="form-group mt-2">
+          <label for="instafeild"> linkdin link</label>
+          <input class="form-control" placeholder="Enter Here" id="linkdinfeild">
+          
+        </input>
+      </div>
+      <div class="form-group mt-2">
+        <label for="linkfeild">instagram</label>
+        <input class="form-control" placeholder="Enter Here" id="instafeild">
+        
+      </input>
+    </div>
+    <div class="form-group mt-2" id="aq">
+      <label for=""> Acedemic UG Institution</label>
+      <input class="form-control eqfeild" placeholder="Enter Here" id="collegefeild" rows="1">
+      </input>
+      <label for=""> course</label>
+      <input class="form-control eqfeild" placeholder="Enter Here" id="coursefeild" rows="1">
+      </input>
+      <label for=""> Duration</label>
+      <input class="form-control eqfeild" placeholder="Enter Here" id="college_dur_feild" rows="1">
+      </input>
+      <label for=""> C.G.P.A</label>
+      <input class="form-control eqfeild" placeholder="Enter Here" id="collegemfeild" rows="1">
+      </input>
+    </div>
+
+    
+    
+  </div>
+      <!---------------------------------------------------------------------------------------->
+
+      <div class="col-md-6 ">
+        <h3>Personal information</h3>
+       
+        <!--school 12 input-->
+
+        <div class="form-group mt-2" id="aq">
+          <label for="">Senior School Name</label>
+          <input class="form-control eqfeild" placeholder="Enter Here" id="hschoolfeild" rows="1">
+          </input>
+
+          <label for=""> C.G.P.A</label>
+          <input class="form-control eqfeild" placeholder="Enter Here" id="school12mfeild" rows="1">
+          </input>
+        </div>
+
+        <!-- class 10th-->
+
+        <div class="form-group mt-5" id="aq">
+          <label for="">  Secondary School Name</label>
+          <input class="form-control eqfeild" placeholder="Enter Here" id="sschoolfeild" rows="1">
+          </input>
+        
+
+          <label for=""> C.G.P.A</label>
+          <input class="form-control eqfeild" placeholder="Enter Here" id="school10mfeild" rows="1">
+          </input>
+        </div>
+<!--work experience -->
+
+<div class="form-group mt-5" id="work">
+  <div class="container mt-5" id="work">
+    <h3>Work Experience</h3>
+    <div id="fields">
+        <!-- Initial fields -->
+        <div>
+            <label for="company">Company</label>
+            <textarea id="company" class="form-control" rows="1"></textarea>
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <textarea id="description" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="form-group mt-3 text-center">
+        <button onclick="addFields()" class="btn btn-primary btn-sm" id="addbutt">Add</button>
+    </div>
+</div>
+
+
+    <!---------------------------------------------------------->
+    <div class="from-group mt-5" id="project">
+      <h3>project</h3>
+    </div>
+  </div>
+
+      <div class="container text-center mt-3 ">
+        <button class="btn btn-primary btn-lg" id="btn">Generate</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Cv COntainer---------------------------------------------------------------------------------------->
+  <div class="resume">
+    <div class="header">
+      <h1 id="name">Kunal</h1>
+      <div id="container">
+        <span id="phone">Element 1</span>
+        <span style="padding-right: 8px;"> | </spaN>
+        <span id="address">Element 2</span>
+
+      </div>
+      <p id="mail">demo </p>
+      <p><a id="linkdin" href="https://www.linkedin.com/in/kunal-1a4983228/">LinkedIn</a> |
+        <a id="insta" href="https://www.hackerrank.com/kk811464">Instagram</a>
+      </p>
+    </div>
+
+    <!--college-->
+    <div class="section">
+      <h2>Education</h2>
+      <div class="item">
+        <h3 id="college"></h3>
+        <p id="course"></p>
+
+        <p> <span> Duratiion : </span> <span id="college_duration"> </span></p>
+        <p> <span> CGPA : </span> <span id="college_cgpa"> </span></p>
+      </div>
+
+      <!--class 12-->
+      <div class="item">
+        <h3 id="school_12"></h3>
+        <p id="class12"> High School</p>
+        <p> <span> CGPA : </span> <span id="school12_cgpa"> </span></p>
+      </div>
+
+      <!--10th class-->
+      <div class="item">
+        <h3 id="school_10"></h3>
+        <p id="class10"> Secondary School</p>
+        <p> <span> CGPA : </span> <span id="school10_cgpa"> </span></p>
+      
+      </div>
+    </div>
+    <div class="section">
+      <h2>Experience</h2>
+      <div class="item">
+        <h3>Bharat-intern</h3>  
+        <ul id="wet" class="list-unstyled mt-3">
+          <!-- List items will be added here -->
+      </ul>
+      </div>
+      <div class="item">
+        <h3>Conducted AI Training Session</h3>
+        <p>Conducted AI lectures at Kendriya Vidyalaya Ghaziabad using both online and offline methods.</p>
+        <ul>
+          <li>Incorporated practical AI tools to enhance students' theoretical knowledge and practical skills.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>C++</li>
+        <li>C</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Projects / Open-Source</h2>
+      <div class="item">
+        <h3>Classification Dog vs Cat</h3>
+        <p>ML, CNN, Python, Colab</p>
+        <p>Introducing the Cat vs Dog Image Classifier: A model trained on Kaggle's dataset to distinguish between
+          images of cats and dogs. Integrated with Google Colab.</p>
+        <p>Link: <a href="https://colab.research.google.com/drive/1sLJ23YS6k4TqEV5ZkIHE-kThAntd7zP5?usp=sharing">Project
+            Link</a></p>
+      </div>
+      <div class="item">
+        <h3>Netflix Clone</h3>
+        <p>HTML, CSS</p>
+        <p>Developed a web page inspired by Netflix using HTML and CSS, focusing on a dynamic interface with a
+          responsive layout and custom fonts.</p>
+        <p>Link: <a href="https://github.com/Kunal8615/Netflix">Project Link</a></p>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>National Creativity Aptitude Test - NCAT</li>
+        <li>Fundamentals of Digital Marketing - Google Digital Garage</li>
+        <li>Graphic Design Careers - LinkedIn</li>
+        <li>Introduction To Internet Of Things - Swayam NPTEL</li>
+        <li>Google Analytics for Beginners - Google</li>
+        <li>Participant - Smart India Hackathon-2022 - SIH 2022</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Honors & Awards</h2>
+      <p>First Year Branch Topper (AIML)</p>
+    </div>
+  </div>
+
+
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
