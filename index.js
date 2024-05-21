@@ -195,7 +195,7 @@ function addExperience() {
     // Get the values of the input fields
     var company = companyInput.value;
     var description = descriptionInput.value;
-    var i =1;
+
     // Check if the input fields are not empty
     if (company.trim() !== "" && description.trim() !== "") {
         
@@ -255,46 +255,115 @@ function addSkill() {
     }
 }
 
-function addProject() {
-    // Get the input fields
-    var projectNameInput = document.getElementById('projectNameInput');
-    var descriptionInput = document.getElementById('descriptionInput');
-    
-    // Get the values of the input fields
-    var projectName = projectNameInput.value;
-    var description = descriptionInput.value;
-    
-    // Check if both input fields are not empty
-    if (projectName.trim() !== "" && description.trim() !== "") {
-        // Create a new div element for the project
-        var projectBox = document.createElement('div');
-        projectBox.className = 'projectBox';
-        
-        // Create an element for the project name
-        var projectNameElement = document.createElement('div');
-        projectNameElement.className = 'projectName';
-        projectNameElement.textContent = projectName;
-        
-        // Create an element for the description
-        var descriptionElement = document.createElement('div');
-        descriptionElement.textContent = description;
-        
-        // Append project name and description to the project box
-        projectBox.appendChild(projectNameElement);
-        projectBox.appendChild(descriptionElement);
-        
-        // Add the new project box to the projects container
-        var projectsContainer = document.getElementById('projectsContainer');
-        projectsContainer.appendChild(projectBox);
-        
-        // Clear the input fields
-        projectNameInput.value = '';
-        descriptionInput.value = '';
-    } else {
-        alert("Please enter both project name and description");
-    }
-}
+
+ function addProject() {
+            // Get the input fields
+            var projectInput = document.getElementById('projectInput');
+            var descriptionInput = document.getElementById('descriptionInputP');
+            
+            // Get the values of the input fields
+            var project = projectInput.value;
+            var description = descriptionInput.value;
+            
+            // Check if the input fields are not empty
+            if (project.trim() !== "" && description.trim() !== "") {
+                // Create a new div element for the project
+                var projectBox = document.createElement('div');
+                projectBox.className = 'projectBox';
+                
+                // Create and set the project name element
+                var projectElement = document.createElement('h3');
+                projectElement.textContent = project;
+                
+                // Create and set the description element
+                var descriptionElement = document.createElement('p');
+                descriptionElement.textContent = description;
+                
+                // Append the project name and description to the project box
+                projectBox.appendChild(projectElement);
+                projectBox.appendChild(descriptionElement);
+                
+                // Add the new project box to the projects container
+                var projectsContainer = document.getElementById('projectsContainer');
+                projectsContainer.appendChild(projectBox);
+                
+                // Clear the input fields
+                projectInput.value = '';
+                descriptionInput.value = '';
+            } else {
+                alert("Please enter both project name and description");
+            }
+        }
+
+        function addCertificate() {
+            // Get the input fields
+            var certificateInput = document.getElementById('certificateInput');
+            var issuedByInput = document.getElementById('issuedByInput');
+            
+            // Get the values of the input fields
+            var certificate = certificateInput.value;
+            var issuedBy = issuedByInput.value;
+            
+            // Check if the input fields are not empty
+            if (certificate.trim() !== "" && issuedBy.trim() !== "") {
+                // Create a new div element for the certificate
+                var certificateBox = document.createElement('div');
+                certificateBox.className = 'certificateBox';
+                
+                // Create and set the certificate text element
+                var certificateText = document.createElement('div');
+                certificateText.className = 'certificateText';
+                certificateText.innerHTML = `<span>${certificate}</span> - <span class="issuedBy">${issuedBy}</span>`;
+                
+                // Append the certificate text to the certificate box
+                certificateBox.appendChild(certificateText);
+                
+                // Add the new certificate box to the certificates container
+                var certificatesContainer = document.getElementById('certificatesContainer');
+                certificatesContainer.appendChild(certificateBox);
+                
+                // Clear the input fields
+                certificateInput.value = '';
+                issuedByInput.value = '';
+            } else {
+                alert("Please enter both certificate and issued by");
+            }
+        }
 
 
+        function addAchievement() {
+            // Get the input field
+            var achievementInput = document.getElementById('achievementInput');
+            
+            // Get the value of the input field
+            var achievement = achievementInput.value;
+            
+            // Check if the input field is not empty
+            if (achievement.trim() !== "") {
+                // Create a new div element for the achievement
+                var achievementBox = document.createElement('div');
+                achievementBox.className = 'achievementBox';
+                
+                // Create and set the achievement text element
+                var achievementText = document.createElement('div');
+                achievementText.className = 'achievementText';
+                achievementText.textContent = achievement;
+                
+                // Append the achievement text to the achievement box
+                achievementBox.appendChild(achievementText);
+                
+                // Add the new achievement box to the achievements container
+                var achievementsContainer = document.getElementById('achievementsContainer');
+                achievementsContainer.appendChild(achievementBox);
+                
+                // Clear the input field
+                achievementInput.value = '';
+            } else {
+                alert("Please enter the achievement");
+            }
+        }
 
-
+button.addEventListener("click",()=>{
+    var main = document.getElementById("maindiv");
+    main.style.display = "none";
+})     

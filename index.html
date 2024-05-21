@@ -17,7 +17,7 @@
 
 <body style="background-color: aquamarine;">
 
-  <div class="div container">
+  <div class="div container" id="maindiv">
     <h1 class="text-center my-2">Resume Generator</h1>
     <p class="text-center">By Code with kunal</p>
 
@@ -50,44 +50,33 @@
         <p class="text-secondary mt-3"> IMportant Links</p>
 
 
-        
+
         <div class="form-group mt-2">
           <label for="instafeild"> linkdin link</label>
           <input class="form-control" placeholder="Enter Here" id="linkdinfeild">
-          
-        </input>
-      </div>
-      <div class="form-group mt-2">
-        <label for="linkfeild">instagram</label>
-        <input class="form-control" placeholder="Enter Here" id="instafeild">
-        
-      </input>
-    </div>
-    <div class="form-group mt-2" id="aq">
-      <label for=""> Acedemic UG Institution</label>
-      <input class="form-control eqfeild" placeholder="Enter Here" id="collegefeild" rows="1">
-      </input>
-      <label for=""> course</label>
-      <input class="form-control eqfeild" placeholder="Enter Here" id="coursefeild" rows="1">
-      </input>
-      <label for=""> Duration</label>
-      <input class="form-control eqfeild" placeholder="Enter Here" id="college_dur_feild" rows="1">
-      </input>
-      <label for=""> C.G.P.A</label>
-      <input class="form-control eqfeild" placeholder="Enter Here" id="collegemfeild" rows="1">
-      </input>
-    </div>
 
-    
-    
-  </div>
-      <!---------------------------------------------------------------------------------------->
+          </input>
+        </div>
+        <div class="form-group mt-2">
+          <label for="linkfeild">instagram</label>
+          <input class="form-control" placeholder="Enter Here" id="instafeild">
 
-      <div class="col-md-6 ">
-        <h3>Personal information</h3>
-       
-        <!--school 12 input-->
-
+          </input>
+        </div>
+        <div class="form-group mt-2" id="aq">
+          <label for=""> Acedemic UG Institution</label>
+          <input class="form-control eqfeild" placeholder="Enter Here" id="collegefeild" rows="1">
+          </input>
+          <label for=""> course</label>
+          <input class="form-control eqfeild" placeholder="Enter Here" id="coursefeild" rows="1">
+          </input>
+          <label for=""> Duration</label>
+          <input class="form-control eqfeild" placeholder="Enter Here" id="college_dur_feild" rows="1">
+          </input>
+          <label for=""> C.G.P.A</label>
+          <input class="form-control eqfeild" placeholder="Enter Here" id="collegemfeild" rows="1">
+          </input>
+        </div>
         <div class="form-group mt-2" id="aq">
           <label for="">Senior School Name</label>
           <input class="form-control eqfeild" placeholder="Enter Here" id="hschoolfeild" rows="1">
@@ -98,143 +87,173 @@
           </input>
         </div>
 
+
+
+      </div>
+      <!---------------------------------------------------------------------------------------->
+
+      <div class="col-md-6 ">
+        <h3>Personal information</h3>
+
+        <!--school 12 input-->
+
+
+
         <!-- class 10th-->
 
-        <div class="form-group mt-5" id="aq">
-          <label for="">  Secondary School Name</label>
+        <div class="form-group " id="aq">
+          <label for=""> Secondary School Name</label>
           <input class="form-control eqfeild" placeholder="Enter Here" id="sschoolfeild" rows="1">
           </input>
-        
+
 
           <label for=""> C.G.P.A</label>
           <input class="form-control eqfeild" placeholder="Enter Here" id="school10mfeild" rows="1">
           </input>
         </div>
-<!--work experience -->
+        <!--work experience -->
 
-<div class="form-group mt-5" id="work">
-  <div class="container mt-5" id="work">
-    <h3>Work Experience</h3>
-    <div>
-      <label for="companyInput">Company: </label>
-      <input class="form-control" type="text" id="companyInput">
-  </div>
-  <div>
-      <label for="descriptionInput">Description: </label>
-      <input class="form-control" type="text" id="descriptionInput">
-  </div>
-  <div class="text-center mt-2">
-    <button  class=" btn btn-primary btn-sm mt-3" onclick="addExperience()">Add</button>
+        <div class="form-group mt-5" id="work">
+          <div class="container mt-5" id="work">
+            <h3>Work Experience</h3>
+            <div>
+              <label for="companyInput">Company: </label>
+              <input class="form-control" type="text" id="companyInput">
+            </div>
+            <div>
+              <label for="descriptionInput">Description: </label>
+              <input class="form-control" type="text" id="descriptionInput">
+            </div>
+            <div class="text-center mt-2">
+              <button class=" btn btn-primary btn-sm mt-3" onclick="addExperience()">Add</button>
 
-  </div>
+            </div>
 
-    <!---------------------------------------------------------->
-    <div>
-      <label class="ml-4" for="skillInput">Skills: </label>
-      <input class="form-control mt-2" type="text" id="skillInput">
-      <div class="text-center">
-        <button class="btn btn-primary btn-sm mt-3" onclick="addSkill()">Add</button>
+            <!---------------------------------------------------------->
+            <div>
+              <label class="ml-4" for="skillInput">Skills: </label>
+              <input class="form-control mt-2" type="text" id="skillInput">
+              <div class="text-center">
+                <button class="btn btn-primary btn-sm mt-3" onclick="addSkill()">Add</button>
 
+              </div>
+            </div>
+            <div>
+              <label for="projectInput">Project Name: </label>
+              <input class="form-control mt-2" type="text" id="projectInput">
+            </div>
+            <div>
+              <label for="descriptionInput">Description: </label>
+              <input class="form-control mt-2" type="text" id="descriptionInputP">
+            </div>
+            <div class="text-center">
+
+              <button class="btn btn-primary btn-sm mt-3" onclick="addProject()">Add</button>
+            </div>
+
+            <div>
+              <label for="certificateInput">Certificate: </label>
+              <input class="form-control mt-2" type="text" id="certificateInput">
+            </div>
+            <div>
+              <label for="issuedByInput">Issued By: </label>
+              <input class="form-control mt-2" type="text" id="issuedByInput">
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary btn-sm mt-3" onclick="addCertificate()">Add</button>
+
+            </div>
+            <!--acheivment-->
+            <div>
+              <label for="achievementInput">Achievement: </label>
+              <input class="form-control mt-2" type="text" id="achievementInput">
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary btn-sm mt-3" onclick="addAchievement()">Add</button>
+            </div>
+
+
+
+          </div>
+        </div>
       </div>
-  </div>
-
-  <div>
-    <label  for="projectInput">Project Name: </label>
-    <input class="form-control" type="text" id="projectInput">
-</div>
-<div>
-    <label  for="descriptionInput">Description: </label>
-    <input class="form-control" type="text" id="descriptionInput">
-</div>
-<button class="btn btn-primary btn-sm mt-3" onclick="addProject()">Add</button>
-
-</div>
-</div>
-</div>
-<div class="container text-center mt-3 ">
-  <button class="btn btn-primary btn-lg" id="btn">Generate</button>
-</div>
-
-  <!-- Cv COntainer---------------------------------------------------------------------------------------->
-  <div class="resume">
-    <div class="header">
-      <h1 id="name">Kunal</h1>
-      <div id="container">
-        <span id="phone">Element 1</span>
-        <span style="padding-right: 8px;"> | </spaN>
-        <span id="address">Element 2</span>
-
       </div>
-      <p id="mail">demo </p>
-      <p><a id="linkdin" href="https://www.linkedin.com/in/kunal-1a4983228/">LinkedIn</a> |
-        <a id="insta" href="https://www.hackerrank.com/kk811464">Instagram</a>
-      </p>
-    </div>
-
-    <!--college-->
-    <div class="section">
-      <h2>Education</h2>
-      <div class="item">
-        <h3 id="college"></h3>
-        <p id="course"></p>
-
-        <p> <span> Duratiion : </span> <span id="college_duration"> </span></p>
-        <p> <span> CGPA : </span> <span id="college_cgpa"> </span></p>
       </div>
-
-      <!--class 12-->
-      <div class="item">
-        <h3 id="school_12"></h3>
-        <p id="class12"> High School</p>
-        <p> <span> CGPA : </span> <span id="school12_cgpa"> </span></p>
+      <div class="container text-center mt-3 ">
+        <button class="btn btn-primary btn-lg" id="btn">Generate</button>
       </div>
 
-      <!--10th class-->
-      <div class="item">
-        <h3 id="school_10"></h3>
-        <p id="class10"> Secondary School</p>
-        <p> <span> CGPA : </span> <span id="school10_cgpa"> </span></p>
-      
-      </div>
-    </div>
-    <div class="section">
-      <h2>Experience</h2>
-      <div id="experiencesContainer">
+      <!-- Cv COntainer---------------------------------------------------------------------------------------->
+      <div class="resume">
+        <div class="header">
+          <h1 id="name">Kunal</h1>
+          <div id="container">
+            <span id="phone">Element 1</span>
+            <span style="padding-right: 8px;"> | </spaN>
+            <span id="address">Element 2</span>
 
+          </div>
+          <p id="mail">demo </p>
+          <p><a id="linkdin" href="https://www.linkedin.com/in/kunal-1a4983228/">LinkedIn</a> |
+            <a id="insta" href="https://www.hackerrank.com/kk811464">Instagram</a>
+          </p>
+        </div>
+
+        <!--college-->
+        <div class="section">
+          <h2>Education</h2>
+          <div class="item">
+            <h3 id="college"></h3>
+            <p id="course"></p>
+
+            <p> <span> Duratiion : </span> <span id="college_duration"> </span></p>
+            <p> <span> CGPA : </span> <span id="college_cgpa"> </span></p>
+          </div>
+
+          <!--class 12-->
+          <div class="item">
+            <h3 id="school_12"></h3>
+            <p id="class12"> High School</p>
+            <p> <span> CGPA : </span> <span id="school12_cgpa"> </span></p>
+          </div>
+
+          <!--10th class-->
+          <div class="item">
+            <h3 id="school_10"></h3>
+            <p id="class10"> Secondary School</p>
+            <p> <span> CGPA : </span> <span id="school10_cgpa"> </span></p>
+
+          </div>
+        </div>
+        <div class="section">
+          <h2>Experience</h2>
+          <div id="experiencesContainer">
+
+          </div>
+
+        </div>
+        <!----->
+        <h2 style="border-bottom: 1px solid black;">Skills</h2>
+        <div id="skillsContainer"></div>
+        <div class="section">
+          <h2>Projects / Open-Source</h2>
+          <div id="projectsContainer"></div>
+        </div>
+        <div class="section">
+          <h2>Certifications</h2>
+          <div id="certificatesContainer"></div>
+        </div>
+        <div class="section">
+          <h2>Honors & Awards</h2>
+          <div id="achievementsContainer"></div>
+        </div>
       </div>
-     
-    </div>
-   <!----->
-   <h2 style="border-bottom: 1px solid black;">Skills</h2>
-   <div id="skillsContainer"></div>
-    <div class="section">
-      <h2>Projects / Open-Source</h2>
-      <div id="projectsContainer">
-        
-      </div>
-    </div>
-    <div class="section">
-      <h2>Certifications</h2>
-      <ul>
-        <li>National Creativity Aptitude Test - NCAT</li>
-        <li>Fundamentals of Digital Marketing - Google Digital Garage</li>
-        <li>Graphic Design Careers - LinkedIn</li>
-        <li>Introduction To Internet Of Things - Swayam NPTEL</li>
-        <li>Google Analytics for Beginners - Google</li>
-        <li>Participant - Smart India Hackathon-2022 - SIH 2022</li>
-      </ul>
-    </div>
-    <div class="section">
-      <h2>Honors & Awards</h2>
-      <p>First Year Branch Topper (AIML)</p>
-    </div>
-  </div>
 
 
-  <script src="index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
