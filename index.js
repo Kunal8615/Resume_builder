@@ -183,65 +183,117 @@ function school10(){
     let ssdd_data = school10mfeild.value;
     school10_cgpa.innerHTML = ssdd_data;
 
-    addFields();
+    
 }
 
-function addFields() {
-         // Get the container of all field groups
-    var fieldsDiv = document.getElementById("fields");
-    var fieldGroups = fieldsDiv.getElementsByClassName("field-group");
-
-    var wetList = document.getElementById("wet");
-
-    // Iterate through all field groups and add them to the list
-    for (var i = 0; i < fieldGroups.length; i++) {
-        var companyValue = fieldGroups[i].querySelector("textarea[id='company']").value;
-        var descValue = fieldGroups[i].querySelector("textarea[id='description']").value;
-
-        if (companyValue && descValue) {
-            var listItem = document.createElement("li");
-
-            var companyName = document.createElement("strong");
-            companyName.textContent = companyValue;
-
-            var description = document.createElement("p");
-            description.textContent = descValue;
-
-            listItem.appendChild(companyName);
-            listItem.appendChild(description);
-
-            wetList.appendChild(listItem);
-        }
+//exp
+function addExperience() {
+    // Get the input fields
+    var companyInput = document.getElementById('companyInput');
+    var descriptionInput = document.getElementById('descriptionInput');
+    
+    // Get the values of the input fields
+    var company = companyInput.value;
+    var description = descriptionInput.value;
+    var i =1;
+    // Check if the input fields are not empty
+    if (company.trim() !== "" && description.trim() !== "") {
+        
+      
+            
+        // Create a new div element for the experience
+        var experienceBox = document.createElement('div');
+        experienceBox.className = 'experienceBox';
+        
+        // Create and set the company name element
+        var companyElement = document.createElement('h3');
+        companyElement.textContent = company;
+        
+        // Create and set the description element
+        var descriptionElement = document.createElement('p');
+        descriptionElement.textContent = description;
+        
+        // Append the company name and description to the experience box
+        experienceBox.appendChild(companyElement);
+        experienceBox.appendChild(descriptionElement);
+        
+        // Add the new experience box to the experiences container
+        var experiencesContainer = document.getElementById('experiencesContainer');
+        experiencesContainer.appendChild(experienceBox);
+        
+        // Clear the input fields
+        companyInput.value = '';
+        descriptionInput.value = '';
+    } else {
+        alert("Please enter both company and description");
     }
-
-    // Clear the fieldsDiv for new inputs
-    fieldsDiv.innerHTML = "";
-
-    // Create new input fields for the next entry
-    var newFields = document.createElement("div");
-    newFields.classList.add("field-group");
-
-    var newCompanyLabel = document.createElement("label");
-    newCompanyLabel.textContent = "Company";
-    var newCompanyInput = document.createElement("textarea");
-    newCompanyInput.id = "company";
-    newCompanyInput.classList.add("form-control");
-
-    var newDescLabel = document.createElement("label");
-    newDescLabel.textContent = "Description";
-    var newDescInput = document.createElement("textarea");
-    newDescInput.id = "description";
-    newDescInput.classList.add("form-control");
-
-    newFields.appendChild(newCompanyLabel);
-    newFields.appendChild(newCompanyInput);
-    newFields.appendChild(newDescLabel);
-    newFields.appendChild(newDescInput);
-
-    fieldsDiv.appendChild(newFields);
 }
  
 
+function addSkill() {
+    // Get the input field
+    var skillInput = document.getElementById('skillInput');
+    
+    // Get the value of the input field
+    var skill = skillInput.value;
+    
+    // Check if the input field is not empty
+    if (skill.trim() !== "") {
+        // Create a new div element for the skill
+        var skillBox = document.createElement('div');
+        skillBox.className = 'skillBox';
+        skillBox.textContent = skill;
+        
+        // Add the new skill box to the skills container
+        var skillsContainer = document.getElementById('skillsContainer');
+        skillsContainer.appendChild(skillBox);
+        
+        // Clear the input field
+        skillInput.value = '';
+    } else {
+        alert("Please enter a skill");
+    }
+}
+
+function addProject() {
+    // Get the input fields
+    var projectNameInput = document.getElementById('projectNameInput');
+    var descriptionInput = document.getElementById('descriptionInput');
+    
+    // Get the values of the input fields
+    var projectName = projectNameInput.value;
+    var description = descriptionInput.value;
+    
+    // Check if both input fields are not empty
+    if (projectName.trim() !== "" && description.trim() !== "") {
+        // Create a new div element for the project
+        var projectBox = document.createElement('div');
+        projectBox.className = 'projectBox';
+        
+        // Create an element for the project name
+        var projectNameElement = document.createElement('div');
+        projectNameElement.className = 'projectName';
+        projectNameElement.textContent = projectName;
+        
+        // Create an element for the description
+        var descriptionElement = document.createElement('div');
+        descriptionElement.textContent = description;
+        
+        // Append project name and description to the project box
+        projectBox.appendChild(projectNameElement);
+        projectBox.appendChild(descriptionElement);
+        
+        // Add the new project box to the projects container
+        var projectsContainer = document.getElementById('projectsContainer');
+        projectsContainer.appendChild(projectBox);
+        
+        // Clear the input fields
+        projectNameInput.value = '';
+        descriptionInput.value = '';
+    } else {
+        alert("Please enter both project name and description");
+    }
+}
 
 
 

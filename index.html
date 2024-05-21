@@ -115,35 +115,45 @@
 <div class="form-group mt-5" id="work">
   <div class="container mt-5" id="work">
     <h3>Work Experience</h3>
-    <div id="fields">
-        <!-- Initial fields -->
-        <div>
-            <label for="company">Company</label>
-            <textarea id="company" class="form-control" rows="1"></textarea>
-        </div>
-        <div>
-            <label for="description">Description</label>
-            <textarea id="description" class="form-control"></textarea>
-        </div>
-    </div>
-    <div class="form-group mt-3 text-center">
-        <button onclick="addFields()" class="btn btn-primary btn-sm" id="addbutt">Add</button>
-    </div>
-</div>
+    <div>
+      <label for="companyInput">Company: </label>
+      <input class="form-control" type="text" id="companyInput">
+  </div>
+  <div>
+      <label for="descriptionInput">Description: </label>
+      <input class="form-control" type="text" id="descriptionInput">
+  </div>
+  <div class="text-center mt-2">
+    <button  class=" btn btn-primary btn-sm mt-3" onclick="addExperience()">Add</button>
 
+  </div>
 
     <!---------------------------------------------------------->
-    <div class="from-group mt-5" id="project">
-      <h3>project</h3>
-    </div>
+    <div>
+      <label class="ml-4" for="skillInput">Skills: </label>
+      <input class="form-control mt-2" type="text" id="skillInput">
+      <div class="text-center">
+        <button class="btn btn-primary btn-sm mt-3" onclick="addSkill()">Add</button>
+
+      </div>
   </div>
 
-      <div class="container text-center mt-3 ">
-        <button class="btn btn-primary btn-lg" id="btn">Generate</button>
-      </div>
-    </div>
-  </div>
-  </div>
+  <div>
+    <label  for="projectInput">Project Name: </label>
+    <input class="form-control" type="text" id="projectInput">
+</div>
+<div>
+    <label  for="descriptionInput">Description: </label>
+    <input class="form-control" type="text" id="descriptionInput">
+</div>
+<button class="btn btn-primary btn-sm mt-3" onclick="addProject()">Add</button>
+
+</div>
+</div>
+</div>
+<div class="container text-center mt-3 ">
+  <button class="btn btn-primary btn-lg" id="btn">Generate</button>
+</div>
 
   <!-- Cv COntainer---------------------------------------------------------------------------------------->
   <div class="resume">
@@ -189,48 +199,18 @@
     </div>
     <div class="section">
       <h2>Experience</h2>
-      <div class="item">
-        <h3>Bharat-intern</h3>  
-        <ul id="wet" class="list-unstyled mt-3">
-          <!-- List items will be added here -->
-      </ul>
+      <div id="experiencesContainer">
+
       </div>
-      <div class="item">
-        <h3>Conducted AI Training Session</h3>
-        <p>Conducted AI lectures at Kendriya Vidyalaya Ghaziabad using both online and offline methods.</p>
-        <ul>
-          <li>Incorporated practical AI tools to enhance students' theoretical knowledge and practical skills.</li>
-        </ul>
-      </div>
+     
     </div>
-    <div class="section">
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>C++</li>
-        <li>C</li>
-        <li>Python</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>SQL</li>
-      </ul>
-    </div>
+   <!----->
+   <h2 style="border-bottom: 1px solid black;">Skills</h2>
+   <div id="skillsContainer"></div>
     <div class="section">
       <h2>Projects / Open-Source</h2>
-      <div class="item">
-        <h3>Classification Dog vs Cat</h3>
-        <p>ML, CNN, Python, Colab</p>
-        <p>Introducing the Cat vs Dog Image Classifier: A model trained on Kaggle's dataset to distinguish between
-          images of cats and dogs. Integrated with Google Colab.</p>
-        <p>Link: <a href="https://colab.research.google.com/drive/1sLJ23YS6k4TqEV5ZkIHE-kThAntd7zP5?usp=sharing">Project
-            Link</a></p>
-      </div>
-      <div class="item">
-        <h3>Netflix Clone</h3>
-        <p>HTML, CSS</p>
-        <p>Developed a web page inspired by Netflix using HTML and CSS, focusing on a dynamic interface with a
-          responsive layout and custom fonts.</p>
-        <p>Link: <a href="https://github.com/Kunal8615/Netflix">Project Link</a></p>
+      <div id="projectsContainer">
+        
       </div>
     </div>
     <div class="section">
