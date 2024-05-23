@@ -1,32 +1,5 @@
-/*function workexp(){
-    //console.log("ready");
-    let newnode = document.createElement("textarea");
-    newnode.classList.add('form-control')
-    newnode.classList.add('wefeild')
-    newnode.classList.add('mt-2')
-    newnode.setAttribute("placeholder","enter here")
-    newnode.classList.add('rows',3)
-let weaddbutton = document.getElementById('weaddbutton')
-let weob = document.getElementById("we")
 
-weob.insertBefore(newnode,weaddbutton);
-}
-
-function addacd(){
-    let newnode1 = document.createElement("textarea");
-    newnode1.classList.add('form-control')
-    newnode1.classList.add('wefeild')
-    newnode1.classList.add('mt-2')
-    newnode1.setAttribute("placeholder","enter here")
-    newnode1.classList.add('rows',3)
-    let aqaddbutton = document.getElementById('aqaddbutton')
-    let aq = document.getElementById("aq")
-
-aq.insertBefore(newnode1,aqaddbutton)
-
-}
-*/
-
+var button = document.getElementById("btn");
 function addFields() {
     // Get the parent element
     var parent = document.getElementById("fields");
@@ -83,12 +56,14 @@ var college_cgpa = document.getElementById("college_cgpa");
 var collegemfeild = document.getElementById("collegemfeild");
 
 
-
+var download = document.getElementById("download");
 
 
 button.addEventListener("click", function() {
     console.log("working");
     //name feild
+    var download = document.getElementById("download");
+    download.style.display = "block";
     var namefeild = document.getElementById("namefeild"); // Access the input element
     let na = namefeild.value; // Get the value of the input element
     namee.innerHTML = String(na); // Set the innerHTML of the div to the input value
@@ -189,6 +164,7 @@ function school10(){
 //exp
 function addExperience() {
     // Get the input fields
+    
     var companyInput = document.getElementById('companyInput');
     var descriptionInput = document.getElementById('descriptionInput');
     
@@ -224,6 +200,7 @@ function addExperience() {
         // Clear the input fields
         companyInput.value = '';
         descriptionInput.value = '';
+        alert("Succesfully added. you can add more");
     } else {
         alert("Please enter both company and description");
     }
@@ -231,6 +208,7 @@ function addExperience() {
  
 
 function addSkill() {
+  
     // Get the input field
     var skillInput = document.getElementById('skillInput');
     
@@ -250,6 +228,7 @@ function addSkill() {
         
         // Clear the input field
         skillInput.value = '';
+        alert("Succesfully added. you can add more");
     } else {
         alert("Please enter a skill");
     }
@@ -257,6 +236,7 @@ function addSkill() {
 
 
  function addProject() {
+    
             // Get the input fields
             var projectInput = document.getElementById('projectInput');
             var descriptionInput = document.getElementById('descriptionInputP');
@@ -290,12 +270,13 @@ function addSkill() {
                 // Clear the input fields
                 projectInput.value = '';
                 descriptionInput.value = '';
+                alert("Succesfully added. you can add more");
             } else {
                 alert("Please enter both project name and description");
             }
         }
 
-        function addCertificate() {
+ function addCertificate() {
             // Get the input fields
             var certificateInput = document.getElementById('certificateInput');
             var issuedByInput = document.getElementById('issuedByInput');
@@ -325,13 +306,14 @@ function addSkill() {
                 // Clear the input fields
                 certificateInput.value = '';
                 issuedByInput.value = '';
+                alert("Succesfully added. you can add more");
             } else {
                 alert("Please enter both certificate and issued by");
             }
         }
 
 
-        function addAchievement() {
+ function addAchievement() {
             // Get the input field
             var achievementInput = document.getElementById('achievementInput');
             
@@ -358,12 +340,48 @@ function addSkill() {
                 
                 // Clear the input field
                 achievementInput.value = '';
+                alert("Succesfully added. you can add more");
             } else {
                 alert("Please enter the achievement");
             }
         }
 
 button.addEventListener("click",()=>{
+  
+
+    var loading = document.getElementById("load");
+        var main = document.getElementById("maindiv");
+        var main1 = document.getElementById("resumee");
+        button.style.display = "none";
+        main.style.display = "none";
+        main1.style.display = "none";
+        loading.style.display = "block";
+        download.style.display = "none";
+        
+
+   
+   setTimeout(function(){
+
     var main = document.getElementById("maindiv");
+    var main1 = document.getElementById("resumee");
     main.style.display = "none";
+    main1.style.display = "block";
+    button.style.display = "none";
+    button.style.display = "none";
+    download.style.display = "block";
+    loading.style.display = "none";
+   },2000)
 })     
+
+
+//download
+document.getElementById('download').addEventListener('click', function () {
+    const element = document.getElementById('resumee');
+    html2pdf().from(element).set({
+        margin: [0.3, 0.5, 0.5, 0.5], // [top, right, bottom, left]
+        filename: 'resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    }).save();
+});

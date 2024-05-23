@@ -4,22 +4,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>Resume</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+</head>
 </head>
 <style>
 
 </style>
 
-<body style="background-color: aquamarine;">
+<body style="background-color: rgb(0, 24, 16); color: white;">
 
   <div class="div container" id="maindiv">
     <h1 class="text-center my-2">Resume Generator</h1>
-    <p class="text-center">By Code with kunal</p>
+    <p class="text-center">BY KUNAL</p>
 
     <div class="row">
 
@@ -43,11 +47,11 @@
 
         <div class="form-group mt-2">
           <label for="addfeild">Your Address</label>
-          <textarea class="form-control" placeholder="Enter Here" id="addressfeild" rows="2">
+          <textarea class="form-control" placeholder="Enter Here" id="addressfeild" rows="1">
 
         </textarea>
         </div>
-        <p class="text-secondary mt-3"> IMportant Links</p>
+        <h3 class="text-secondary mt-3"> Important Links</h3>
 
 
 
@@ -179,14 +183,22 @@
       </div>
       </div>
       </div>
-      <div class="container text-center mt-3 ">
+      <div class="text-center  mb-3" id="b">
         <button class="btn btn-primary btn-lg" id="btn">Generate</button>
       </div>
 
+      <div  class="text-center">
+        <button class="btn btn-primary btn-lg mt-3" id="download"> Download</button>
+      </div>
+
+      <div  class="text-center" id="load" role="status">
+        <span class="spinner-border"></span>
+        <h3 class="text-center">Generating</h3>
+      </div>
       <!-- Cv COntainer---------------------------------------------------------------------------------------->
-      <div class="resume">
+      <div class="resume "  id="resumee">
         <div class="header">
-          <h1 id="name">Kunal</h1>
+          <h1   style="color: black;" id="name">Kunal</h1>
           <div id="container">
             <span id="phone">Element 1</span>
             <span style="padding-right: 8px;"> | </spaN>
@@ -203,23 +215,23 @@
         <div class="section">
           <h2>Education</h2>
           <div class="item">
-            <h3 id="college"></h3>
+            <b   style="color: rgb(17, 17, 17); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" id="college"></b>
             <p id="course"></p>
 
-            <p> <span> Duratiion : </span> <span id="college_duration"> </span></p>
+            <p> <span> Duration : </span> <span id="college_duration"> </span></p>
             <p> <span> CGPA : </span> <span id="college_cgpa"> </span></p>
           </div>
 
           <!--class 12-->
           <div class="item">
-            <h3 id="school_12"></h3>
-            <p id="class12"> High School</p>
+            <b style="color: black;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; " id="school_12"></b>
+            <p > High School</p>
             <p> <span> CGPA : </span> <span id="school12_cgpa"> </span></p>
           </div>
 
           <!--10th class-->
           <div class="item">
-            <h3 id="school_10"></h3>
+            <b style="color: black; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" id="school_10"></b>
             <p id="class10"> Secondary School</p>
             <p> <span> CGPA : </span> <span id="school10_cgpa"> </span></p>
 
@@ -233,7 +245,7 @@
 
         </div>
         <!----->
-        <h2 style="border-bottom: 1px solid black;">Skills</h2>
+        <h2 style="color: black; border-bottom: 1px solid black;">Skills</h2>
         <div id="skillsContainer"></div>
         <div class="section">
           <h2>Projects / Open-Source</h2>
@@ -245,7 +257,7 @@
         </div>
         <div class="section">
           <h2>Honors & Awards</h2>
-          <div id="achievementsContainer"></div>
+          <div id="achievementsContainer" style="color: black;"></div>
         </div>
       </div>
 
