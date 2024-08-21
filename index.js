@@ -346,6 +346,8 @@ function addSkill() {
             }
         }
 
+var body = document.getElementsByClassName("mainbody")
+
 button.addEventListener("click",()=>{
   
 
@@ -357,6 +359,7 @@ button.addEventListener("click",()=>{
         main1.style.display = "none";
         loading.style.display = "block";
         download.style.display = "none";
+        document.body.style.backgroundSize = "cover";
         
 
    
@@ -370,6 +373,7 @@ button.addEventListener("click",()=>{
     button.style.display = "none";
     download.style.display = "block";
     loading.style.display = "none";
+    
    },2000)
 })     
 
