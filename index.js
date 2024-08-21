@@ -378,10 +378,10 @@ button.addEventListener("click",()=>{
 document.getElementById('download').addEventListener('click', function () {
     const element = document.getElementById('resumee');
     html2pdf().from(element).set({
-        margin: [0.3, 0.5, 0.5, 0.5], // [top, right, bottom, left]
+        margin: [0.5, 0.5, 0.5, 0.5], // [top, right, bottom, left]
         filename: 'resume.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
+        image: { type: 'jpeg', quality: 1.00 },
+        html2canvas: { scale: 2, logging: true },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
     }).save();
 });
